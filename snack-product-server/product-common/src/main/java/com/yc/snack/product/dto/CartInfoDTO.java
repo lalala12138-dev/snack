@@ -2,8 +2,10 @@ package com.yc.snack.product.dto;
 
 /**
  * 购物车信息传输对象
- * @author lalala
- *
+ * company 源辰信息
+ * @author navy
+ * @date 2020年10月2日
+ * Email haijunzhou@hnit.edu.cn
  */
 public class CartInfoDTO {
 	private String gno;
@@ -12,7 +14,7 @@ public class CartInfoDTO {
 	
 	@Override
 	public String toString() {
-		return "CartInfoDTO [gno=" + gno + ", nums=" + nums + ", price=" + price + "]";
+		return "CrartInfoDTO [gno=" + gno + ", nums=" + nums + ", price=" + price + "]";
 	}
 
 	public String getGno() {
@@ -75,6 +77,4 @@ public class CartInfoDTO {
 			return false;
 		return true;
 	}
-	
-	
-}
+}	

@@ -16,6 +16,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<product-common.version>0.0.1-SNAPSHOT</product-common.version>
+		<user-common.version>0.0.1-SNAPSHOT</user-common.version>
+		<user-client.version>0.0.1-SNAPSHOT</user-client.version>
 		<product-view.version>0.0.1-SNAPSHOT</product-view.version>
 	</properties>
 	
@@ -37,6 +39,18 @@
 			<groupId>com.yc</groupId>
 			<artifactId>product-view</artifactId>
 			<version>${product-view.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.yc</groupId>
+			<artifactId>user-common</artifactId>
+			<version>${user-common.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.yc</groupId>
+			<artifactId>user-client</artifactId>
+			<version>${user-client.version}</version>
 		</dependency>
 	</dependencies>
 	

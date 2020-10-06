@@ -22,16 +22,35 @@ spring:
          charset: utf-8
          force: true
          enabled: true
+         
+   session:
+      # 将session信息存到redis中
+      store-type: redis
+
+   redis:
+      database: 0
+      host: 192.168.23.1
+      port: 6379
+      password:
+      timeout: 5000
+      jedis:
+         pool:
+            max-active: 8
 
 
 mybatis:
    # mapper映射文件所在路径
    mapper-locations: mapper/*Mapper.xml
    # 需要启动别名的类所在的包
-   type-aliases-package: com.yc.snack.product.bean
+   type-aliases-package: com.yc.snack.product.bean,com.yc.snack.product.dto,com.yc.snack.product.vo
    
 # 注册到注册中心
 eureka:
    client:
       service-url:
          defaultZone: http://lalala:123321@127.0.0.1:6611/eureka
+         
+logging:
+   level:
+      com.yc.snack.product.mapper: debug
+      # org.springframework.cloud.netflix: debug

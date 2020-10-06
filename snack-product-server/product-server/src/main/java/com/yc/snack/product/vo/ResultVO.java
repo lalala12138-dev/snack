@@ -7,8 +7,8 @@ public class ResultVO {
 	private Integer code;
 	private String msg;
 	
-	@JsonProperty("data")
-	private Object obj; //当以json格式返回时，属性名改为data
+	@JsonProperty("data") // 当以json格式返回时，属性名改成data
+	private Object obj;
 
 	@Override
 	public String toString() {
@@ -39,40 +39,6 @@ public class ResultVO {
 		this.obj = obj;
 	}
 
-	public ResultVO() {
-		super();
-	}
-
-	public ResultVO(Integer code) {
-		super();
-		this.code = code;
-	}
-	
-	public ResultVO(ResultEnum enums,Object obj) {
-		super();
-		this.code=enums.getCode();
-		this.msg=enums.getMsg();
-		this.obj=obj;
-	}
-	
-	public ResultVO(ResultEnum enums) {
-		super();
-		this.code=enums.getCode();
-		this.msg=enums.getMsg();
-	}
-
-	public ResultVO(Integer code, String msg) {
-		super();
-		this.code = code;
-		this.msg = msg;
-	}
-
-	public ResultVO(Integer code, Object obj) {
-		super();
-		this.code = code;
-		this.obj = obj;
-	}
-
 	public ResultVO(Integer code, String msg, Object obj) {
 		super();
 		this.code = code;
@@ -80,6 +46,37 @@ public class ResultVO {
 		this.obj = obj;
 	}
 	
+	public ResultVO(Integer code, Object obj) {
+		super();
+		this.code = code;
+		this.obj = obj;
+	}
 	
+	public ResultVO(Integer code, String msg) {
+		super();
+		this.code = code;
+		this.msg = msg;
+	}
 	
+	public ResultVO(ResultEnum enums) {
+		super();
+		this.code = enums.getCode();
+		this.msg = enums.getMsg();
+	}
+	
+	public ResultVO(ResultEnum enums, Object obj) {
+		super();
+		this.code = enums.getCode();
+		this.msg = enums.getMsg();
+		this.obj = obj;
+	}
+	
+	public ResultVO(Integer code) {
+		super();
+		this.code = code;
+	}
+
+	public ResultVO() {
+		super();
+	}
 }

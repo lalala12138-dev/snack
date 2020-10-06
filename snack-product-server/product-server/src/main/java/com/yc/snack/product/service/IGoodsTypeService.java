@@ -3,14 +3,9 @@ package com.yc.snack.product.service;
 import java.util.List;
 
 import com.yc.snack.product.bean.GoodsType;
+import com.yc.snack.product.dto.ProductTypeInfoDTO;
 
-/**
- * 商品类型的业务接口
- * @author lalala
- *
- */
 public interface IGoodsTypeService {
-	
 	public int add(GoodsType type);
 	
 	public int update(GoodsType type);
@@ -18,4 +13,6 @@ public interface IGoodsTypeService {
 	public List<GoodsType> findAll();
 	
 	public List<GoodsType> finds();
+
+	public List<ProductTypeInfoDTO> findTypes();
 }

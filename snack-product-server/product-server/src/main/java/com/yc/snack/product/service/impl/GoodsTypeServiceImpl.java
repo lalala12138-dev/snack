@@ -6,18 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yc.snack.product.bean.GoodsType;
+import com.yc.snack.product.dto.ProductTypeInfoDTO;
 import com.yc.snack.product.mapper.IGoodsTypeMapper;
 import com.yc.snack.product.service.IGoodsTypeService;
 import com.yc.snack.product.util.StringUtil;
 
-/**
- * 商品类型业务实现类
- * @author lalala
- *
- */
 @Service
 public class GoodsTypeServiceImpl implements IGoodsTypeService{
-	
 	@Autowired
 	private IGoodsTypeMapper goodsTypeMapper;
 	
@@ -47,4 +42,8 @@ public class GoodsTypeServiceImpl implements IGoodsTypeService{
 		return goodsTypeMapper.finds();
 	}
 
+	@Override
+	public List<ProductTypeInfoDTO> findTypes() {
+		return goodsTypeMapper.findTypes();
+	}
 }
